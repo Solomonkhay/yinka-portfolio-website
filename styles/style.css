@@ -183,24 +183,24 @@ span {
     background-color: var(--main-color);
     color: black;}
 
-    .text-animation {
+.text-animation {
         font-size: 34px;
         font-weight: 600;
         line-height: 1.5;
         min-width: 280px;
-    }
+}
     
-    .text-animation span {
+.text-animation span {
         position: relative;
-    }
+}
     
-    .text-animation span::before {
+.text-animation span::before {
         content: ""; 
         color: var(--main-color);
         animation: words 25s infinite;
-    }
+}
     
-    .text-animation span::after {
+.text-animation span::after {
         content: "";
         background-color: var(--bg-color);
         position: absolute;
@@ -209,15 +209,15 @@ span {
         border-left: 3px solid var(--bg-color);
         right: -8px;
         animation: cursor 0.8s infinite, typing 25s steps(40) infinite;
-    }
+}
     
-    @keyframes cursor {
+@keyframes cursor {
         to {
             border-left: 2px solid var(--main-color);
         }
-    }
+}
     
-    @keyframes words {
+@keyframes words {
         0%, 25% {
             content: "a Senior Investment Banker";
         }
@@ -231,61 +231,61 @@ span {
             content: "a Public Personality and Speaker";
         }
     
-    }
+}
     
-    @keyframes typing {
+@keyframes typing {
         0%, 10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
             width: 0;
         }
         5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
             width: calc(100% + 8px);
         }
-    }
+}
     
      /* EDUCATIONAL SECTION */
-  .heading {
+.heading {
 	  	font-size: 8rem;
 	  	text-align: center;
 	  	margin: 5rem 0;
-  }
-  .education{
+}
+.education{
   	padding: 100px 15px;
   	background: var(--second-bg-color);
-  }
-  .education h2 {
+}
+.education h2 {
   	margin-bottom: 5rem;
-  }
-  .timeline-items {
+}
+.timeline-items {
   	max-width: 1200px;
   	margin: auto;
   	display: flex;
   	flex-wrap: wrap;
   	position: relative;
-  }
-  .timeline-items::before	{
+}
+.timeline-items::before	{
   	content: "";
   	position: absolute;
   	width: 5px;
   	height: 100%;
   	background-color: var(--main-color);
   	left: calc(50% - 1px);
-  }
-  .timeline-item {
+}
+.timeline-item {
   	margin-bottom: 40px;
   	width: 100%;
   	position: relative;
-  }
-  .timeline-item:last-child {
+}
+.timeline-item:last-child {
   	margin-bottom:  0;
-  }
-  .timeline-item:nth-child(odd) {
+}
+.timeline-item:nth-child(odd) {
   	padding-right: calc(50% + 30px);
   	text-align: right;
-  }
+}
   .timeline-item:nth-child(even) {
   	padding-left: calc(50% + 30px);
-  }
-  .timeline-dot {
+}
+.timeline-dot {
   	height: 21px;
   	width: 21px;
   	background-color: var(--main-color);
@@ -295,14 +295,14 @@ span {
   	left: calc(50% - 8px);
   	border-radius: 50%;
   	top: 10px;
-  }
-  .timeline-date {
+}
+.timeline-date {
   	font-size: 20px;
   	font-weight: 800;
   	color: white;
   	margin: 6px 0 15px;
-  }
-  .timeline-content {
+}
+.timeline-content {
   	background-color: var(--bg-color);
   	border: 3px solid var(--main-color);
   	padding: 30px 50px;
@@ -310,23 +310,23 @@ span {
   	box-shadow: 0 0 10px var(--main-color);
   	cursor: pointer;
   	transition: 0.3s ease-in-out;
-  }
+}
   .timeline-content:hover {
   	transform: scale(1.05);
   	box-shadow: 0 0 10px var(--main-color);
-  }
-  .timeline-content h3 {
+}
+.timeline-content h3 {
   	font-size: 20px;
   	color: white;
   	margin: 0 10px;
   	font-weight: 500;
-  }
-  .timeline-content p {
+}
+.timeline-content p {
   	color: white;
   	font-size: 16px;
   	font-weight: 300;
   	line-height: 22px;
-  }
+}
   ::-webkit-scrollbar{
   	width: 15px;
   }
@@ -708,13 +708,17 @@ blockquote::-webkit-scrollbar-track {
     }
 }
 
-@media (max-width:991px){
+@media (max-width:992px){
+    html {
+        font-size: 50%;
+    }
     .header {
         padding: 2rem 3%;
     }
     section {
         padding: 10rem 3% 2rem;
     }
+
     .timeline-items::before{
         left: 7px;
     }
@@ -732,9 +736,17 @@ blockquote::-webkit-scrollbar-track {
     .service{
         padding-bottom: 7rem;
     }
+    .testimonials h2{
+        font-size: 20px;
+        align-items: center;
+    }
     .testimonials-container  {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+    .testimonials-container .testimonial-box .testimonial-profile {
+        height: 100%;
+        width: 100%;
     }
     .contact form {
         flex-direction: column;
@@ -743,6 +755,7 @@ blockquote::-webkit-scrollbar-track {
         padding: 2rem 3%;
     }
 }
+
 @media(max-width:895px) {
     #menu-icon{
         display: block;
@@ -777,6 +790,10 @@ blockquote::-webkit-scrollbar-track {
     .home-content p{
         max-width:600px;
         margin-top: 3rem;
+    }
+    .home-img {
+    padding-bottom: 0;
+    margin-bottom: -90px;
     }
     .home-img img {
         width: 56vw;
